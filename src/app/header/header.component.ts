@@ -7,9 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
+  mostrarDatos: boolean;
   constructor() { }
 
   ngOnInit() {
+    this.mostrarDatos = false;
   }
 
 }

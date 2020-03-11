@@ -1,3 +1,20 @@
-<div>
-    <img src="assets/user.png">
+<div class="row">
+    <div class="col-sm-3">
+        <div class="card">
+            <img class="card-img-top" src="assets/user.png" alt="Card image" style="width:100%">
+        </div>
+        <div class="card-body">
+            <button type="button" (click)="this.mostrar = !this.mostrar" class="btn btn-primary">{{!this.mostrar ? 'Mostrar' : 'Ocultar'}}</button>
+        </div>
+    </div>
+    <div class="col-sm-6" *ngIf="this.mostrar">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Nombre: {{this.Usuario.nombre}}</h4>
+                <p class="card-text">Email: {{this.Usuario.email}}</p>
+                <p class="card-text">Username: {{this.Usuario.userName}}</p>
+                <p class="card-text">Clave: <span class="text-monospace">{{this.Usuario.clave}}</span></p>
+            </div>
+        </div>
+    </div>
 </div>

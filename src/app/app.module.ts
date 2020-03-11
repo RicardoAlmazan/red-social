@@ -7,6 +7,7 @@ import { FooterComponent } from './footer/footer.component';
 import { NavComponent } from './nav/nav.component';
 import { CuentaComponent } from './cuenta/cuenta.component';
 import { AmigosComponent } from './amigos/amigos.component';
+import {UsuariosService} from './usuarios.service';
 
 const routes: Routes = [
   { path: 'cuenta', component: CuentaComponent },
@@ -27,7 +28,9 @@ const routes: Routes = [
     BrowserModule,
     RouterModule.forRoot(routes)
   ],
-  providers: [],
+  providers: [
+    UsuariosService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
